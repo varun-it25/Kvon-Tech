@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Html_APIs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        section {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        #div {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .data {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            border: none;
+            outline: none;
+            background-color: #f4f4f4;
+            margin-top: 4px;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            background-color: #e6e6e6;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.6rem 2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        #end {
+            background-color: #f14242;
+            color: white;
+        }
+
+        #setter {
+            background-color: #15a599;
+            color: white;
+        }
+
+        #status, #st-status {
+            color: #6a6a6a;
+            font-size: 14px;
+            margin-top: 1rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-group div {
+            flex-grow: 1;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1>Html_APIs</h1>
+
+    <section>
+        <!-- Web Worker & Geo Location Section -->
+        <div id="div">
+            <p class="section-header">Web Worker & Geo Location</p>
+            <div id="weather-info"></div>
+            <p id="status">Worker fetches data after 5 minutes.</p>
+            <button id="end">End Worker</button>
+        </div>
+
+        <!-- Web Storage Section -->
+        <div id="div">
+            <p class="section-header">Web Storage</p>
+
+            <div class="input-group">
+                <div>
+                    <label for="key">Key:</label>
+                    <input type="text" id="key" name="key" readonly value="Key">
+                </div>
+                <div>
+                    <label for="value">Value:</label>
+                    <input type="text" id="value" name="value">
+                </div>
+            </div>
+
+            <p id="st-status">This value is stored in local storage.</p>
+            <button id="setter">Set</button>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
