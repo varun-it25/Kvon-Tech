@@ -1,0 +1,284 @@
+*{
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  padding-inline: 4rem;
+}
+
+section{
+  height: 100vh;
+}
+
+section:nth-child(odd) {
+  background-color: #efefef;
+}
+
+section #title{
+  padding-block: 4rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(217, 217, 217);
+  padding-top: 1.2rem;
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+#logo{
+  color: rgb(88, 88, 185);
+  font-size: 1.25rem;
+}
+
+nav{
+  display: flex;
+  gap: 2rem;
+}
+
+nav a{
+  text-decoration: none;
+  color: rgb(45, 45, 45);  
+}
+
+.hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  gap: 0.5rem;
+}
+
+.hero-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-img{
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img img{
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 90%;
+  margin-top: 4px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.tagline{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagline h1{
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: rgb(126, 126, 126);
+}
+
+.hero-div p{
+  padding-inline: 3rem;
+  color: rgb(160, 160, 160);
+  font-size: 0.80rem;
+  margin-top: 1.2rem;
+}
+
+.hero-div .btns{
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  padding-inline: 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button{
+  padding: 0.5rem 2rem;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: rgb(45, 45, 45);  
+}
+
+#cta-btn{
+  background-color: rgb(88, 88, 185);
+  color: white;
+  border: none;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  gap: 1.5rem;
+}
+
+.project-card{
+  border-radius: 4px;
+  padding: 0.8rem;
+  background-color: rgba(124, 185, 88, 0.1)
+}
+
+.project-card:nth-child(even){
+  background-color: rgba(88, 88, 185, 0.1);
+}
+
+.project-card #project-banner{
+  aspect-ratio: 24/9;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 3px;
+}
+
+#project-title{
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.project-info{
+  padding-top: 16px;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+  padding-inline: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: rgb(74, 74, 74);
+}
+
+.project-info .stack{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-info .stack img{
+  width: 100%;
+}
+
+.skills-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.skill{
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill img{
+  width: 60%;
+  border-radius: 8px;
+}
+
+.contact-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 55%;
+}
+
+.contact-info{
+  background-color: rgb(88, 88, 185);
+  border-radius: 8px;
+  color: white;
+  padding: 2rem;
+}
+
+.contact-info img{
+  aspect-ratio: 1/1;
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 8px;
+}
+
+.contact-info a{
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  text-decoration: underline;
+  color: white;
+}
+
+.contact-r{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-r img{
+  width: 20rem;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding-block: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile{
+  width: 100vw;  
+  height: 100vh;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile img{
+  width: 100%;  
+}
+
+@media screen and (max-width: 1366px) {
+  .tablet{
+    display: none;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile{
+    display: block;
+  }
+  .container{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mobile{
+    display: block;
+  }
+  .container{
+    display: none;
+  }
+}
