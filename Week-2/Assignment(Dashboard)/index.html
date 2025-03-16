@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sidebar Layout</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://kvontech.com/assets/images/kvontech_header_logo.svg" alt="KvonTech Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.143 4H4.857A.857.857 0 0 0 4 4.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 10 9.143V4.857A.857.857 0 0 0 9.143 4Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286A.857.857 0 0 0 20 9.143V4.857A.857.857 0 0 0 19.143 4Zm-10 10H4.857a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286A.857.857 0 0 0 9.143 14Zm10 0h-4.286a.857.857 0 0 0-.857.857v4.286c0 .473.384.857.857.857h4.286a.857.857 0 0 0 .857-.857v-4.286a.857.857 0 0 0-.857-.857Z"/>
+                    </svg>                      
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v15a1 1 0 0 0 1 1h15M8 16l2.5-5.5 3 3L17.273 7 20 9.667"/>
+                    </svg>                                           
+                    <a href="#">Analytics</a>
+                </li>
+                <li>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M3.22302 14C4.13247 18.008 7.71683 21 12 21c4.9706 0 9-4.0294 9-9 0-4.97056-4.0294-9-9-9-3.72916 0-6.92858 2.26806-8.29409 5.5M7 9H3V5"/>
+                    </svg>                                           
+                    <a href="#">Transactions</a>
+                </li>
+                <li>
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5.365V3m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175 0 .593 0 1.292-.538 1.292H5.538C5 18 5 17.301 5 16.708c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 12 5.365ZM8.733 18c.094.852.306 1.54.944 2.112a3.48 3.48 0 0 0 4.646 0c.638-.572 1.236-1.26 1.33-2.112h-6.92Z"/>
+                    </svg>
+                    <a href="#">Notifications</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main-content">
+        <header class="header">
+            <div class="search-container">
+                <svg class="search-icon svg-icon" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="search" placeholder="Search something here..." class="search-input">
+            </div>
+            
+            <div class="header-actions">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" id="bell-icon">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5.365V3m0 2.365a5.338 5.338 0 0 1 5.133 5.368v1.8c0 2.386 1.867 2.982 1.867 4.175 0 .593 0 1.292-.538 1.292H5.538C5 18 5 17.301 5 16.708c0-1.193 1.867-1.789 1.867-4.175v-1.8A5.338 5.338 0 0 1 12 5.365ZM8.733 18c.094.852.306 1.54.944 2.112a3.48 3.48 0 0 0 4.646 0c.638-.572 1.236-1.26 1.33-2.112h-6.92Z"/>
+                </svg>
+                <input type="checkbox" id="theme-checkbox" onchange="document.body.classList.toggle('dark-mode')">
+                <label for="theme-checkbox" class="theme-toggle">
+
+                    <svg class="moon-icon svg-icon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+
+                    <svg class="sun-icon svg-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </label>
+                
+                <div class="user-dropdown">
+                    <input type="checkbox" id="dropdown-checkbox">
+                    <label for="dropdown-checkbox" class="user-button">
+                        <img src="https://cdn-icons-png.flaticon.com/512/9187/9187532.png" alt="User" class="avatar">
+                        <svg class="chevron-icon svg-icon" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </label>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">Item 1</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item">Item 2</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item">Item 3</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="content">
+            <div class="container">
+                <div class="card">Dashboard</div>
+                <div class="card">
+                    <canvas id="myLineChart"></canvas>
+                </div>
+                <div class="card" style="grid-column: span 2;">
+                    <table class="transactions">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Mode</th>
+                                <th>Status</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Send</td>
+                                <td>Credit Card</td>
+                                <td>Success</td>
+                                <td>50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Send</td>
+                                <td>Credit Card</td>
+                                <td>Success</td>
+                                <td>50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Send</td>
+                                <td>Credit Card</td>
+                                <td>Success</td>
+                                <td>50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Send</td>
+                                <td>Credit Card</td>
+                                <td>Success</td>
+                                <td>50,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>            
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('theme-checkbox').addEventListener('change', function() {
+            localStorage.setItem('darkMode', this.checked ? 'enabled' : 'disabled');
+        });
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.getElementById('theme-checkbox').checked = true;
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+
+    <script>
+        const ctx = document.getElementById('myLineChart').getContext('2d');
+
+        const myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Sales Over Time',
+                    data: [10, 25, 50, 40, 60, 80],
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
