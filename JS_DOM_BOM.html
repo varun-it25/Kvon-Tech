@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom Bom</title>
+</head>
+<body>
+    <h1>DOM Example</h1>
+    <p id="para"></p>
+    
+    <p id="button_status">Button is not clicked.</p>
+    <button id="btn">BUTTON</button>
+
+    <form onsubmit="submit(e)" id="myForm">
+        <input name="name" type="text" placeholder="Enter Name" required>
+        <input name="role" type="text" placeholder="Enter Role" required>
+        <button type="submit">Submit</button>
+    </form>    
+
+
+    <h1>BOM Example</h1>
+    <p id="url">Current URL : </p>
+    <button id="reload_btn">Reload</button>
+    <button id="alert_btn">Alert</button>
+    <button id="prompt_btn">Prompt</button>
+    <button id="confirm_btn">Confirm</button>
+
+    <p id="width">Screen width: </p>
+    <p id="height">Screen height: </p>
+
+    <script>
+        // DOM
+        let p = document.getElementById(`para`)
+        let btn = document.getElementById(`btn`)
+        let button_status = document.getElementById(`button_status`)
+        let form = document.getElementById('myForm');
+
+        form.style.border = "1px solid black"
+        form.style.borderRadius = "8px"
+        form.style.padding = "1rem"
+        form.style.marginTop = "1rem"
+        form.style.width = "fit-content"
+        
+        p.innerHTML = "I am para written by JS."
+        
+        btn.addEventListener(`click`, ()=>{
+            button_status.innerText = "Button is clicked."
+        })
+        
+        form.addEventListener(`submit`, e => {
+            e.preventDefault(); 
+            alert(`Form is sumbitted.`)
+            window.location.reload()
+        })
+        
+        // Bom
+        let url = document.getElementById(`url`)
+        let reload_btn = document.getElementById(`reload_btn`)
+        let alert_btn = document.getElementById(`alert_btn`)
+        let prompt_btn = document.getElementById(`prompt_btn`)
+        let confirm_btn = document.getElementById(`confirm_btn`)
+        let width = document.getElementById(`width`)
+        let height = document.getElementById(`height`)
+
+        reload_btn.addEventListener(`click`,() => {
+            window.location.reload();
+        })
+
+        alert_btn.addEventListener(`click`,() => {
+            alert(`I am alert`);
+        })
+
+        prompt_btn.addEventListener(`click`,() => {
+            prompt(`I am prompt, Enter anything here...`);
+        })
+
+        confirm_btn.addEventListener(`click`,() => {
+            prompt(`I am confirm, Choose yes or no.`);
+        })
+
+        url.innerHTML = `Current URL: ${window.location.href}`
+
+        width.innerText = `Screen width: ${window.screen.width} px`
+        height.innerText = `Screen height: ${window.screen.height} px`
+
+    </script>
+</body>
+</html>
