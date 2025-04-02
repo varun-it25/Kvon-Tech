@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Quizify - Questions</title>
+</head> 
+<body class="dark w-screen h-screen flex flex-col p-8 space-y-8 sm:space-y-0 pb-12 sm:pb-8 overflow-auto">
+    <header class="flex justify-between items-center text-2xl font-bold px-2 sm:px-4">
+        <div></div>
+        <div class="text-center">Quizify</div>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+            <i class="bi bi-sun-fill"></i>
+        </button>
+    </header>
+
+    <div class="flex-1 flex flex-col p-0 sm:p-8 justify-start sm:justify-between space-y-8 sm:space-y-4">
+        <div class="w-full space-y-1 bg-zinc-800 border-zinc-400 py-4 pl-6 pr-6 sm:pr-8 border-b rounded-xl question-container">
+            <div class="flex justify-between items-center pb-2">
+                <p class="font-semibold text-lg" id="QuestionNumber">Question 1</p>
+                <div class="flex items-center space-x-2">
+                    <span id="hints-count" class="text-sm">Hints: 3</span>
+                    <i class="bi bi-info-circle text-yellow-300 cursor-pointer" id="hint-icon" title="Use a hint"></i>
+                </div>
+            </div>
+            <p class="text-sm" id="Question">What does the acronym 'HTTP' stand for?</p>
+            <p id="hint-text" class="text-xs text-yellow-300 mt-2 hidden"></p>
+        </div>
+
+        <div id="options-container" class="flex flex-col space-y-4 flex-0 sm:flex-1 justify-start sm:justify-center pb-6 sm:pb-0"><!-- Options will be dynamically inserted here --></div>
+
+        <div class="flex space-x-6 w-full justify-center items-center">
+            <button class="nav-btn" id="prev-btn" disabled><i class="bi bi-chevron-left"></i></button>
+            <button class="nav-btn" id="next-btn"><i class="bi bi-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div id="pagination" class="flex justify-center space-x-2"></div>
+    
+    <div id="start-container" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="bg-zinc-800 p-8 rounded-xl max-w-md w-full text-center modal-content">
+            <h2 class="text-2xl font-bold mb-4">Welcome to Quizify!</h2>
+
+            <div class="mb-6 text-left">
+                <p class="mb-3">Test your knowledge with this interactive quiz.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Answer 5 technology-related questions</li>
+                    <li>Use hints if you get stuck (limited to 3)</li>
+                    <li>Navigate with buttons or keyboard arrows</li>
+                    <li>Your progress is saved automatically</li>
+                </ul>
+            </div>
+
+            <button id="start-btn" class="primary-btn px-6 py-2">Start Quiz</button>
+        </div>
+    </div>
+    
+    <div id="result-container" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+        <div class="bg-zinc-800 p-8 rounded-xl max-w-md w-full text-center modal-content">
+            <h2 class="text-2xl font-bold mb-4">Quiz Completed!</h2>
+            <p id="score-display" class="text-xl mb-6">Your score: 0/5</p>
+            <button id="restart-btn" class="primary-btn px-6 py-2">Restart Quiz</button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js"></script>
+</body>
+</html>

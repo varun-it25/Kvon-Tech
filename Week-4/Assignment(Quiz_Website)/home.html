@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+</head>
+<body class="w-screen flex flex-col h-screen overflow-auto bg-black text-white items-center">
+    <header class="flex absolute top-0 justify-center p-6 sm:p-4">
+        <nav class="w-fit bg-zinc-900 space-x-6 sm:space-x-8 px-8 sm:px-12 sm:py-3 py-4 rounded-xl">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
+    </header>
+
+    <section class="flex-col-reverse md:flex-row flex items-center justify-center flex-1">
+        <div class="flex-col flex space-y-8 pr-8">
+            <div class="space-y-[-1.5rem]">
+                <div class="text-[4rem] sm:text-[5rem] font-bold">Tech is crip</div>
+                <div class="text-[3rem] sm:text-[4rem] text-nowrap">can have a Quiz</div>
+            </div>
+
+            <div class="flex space-x-3">
+                <button class="border border-zinc-600 font-medium px-4 py-1 rounded cursor-pointer">Learn More</button>
+                <a href="/Week-4/Assignment(Quiz_Website)/app.html"><button class="bg-white text-black px-4 py-1 rounded font-medium cursor-pointer">Start</button></a>
+            </div>
+        </div>
+
+        <div class="w-[30rem] aspect-square mt-0 sm:mt-8">
+            <spline-viewer url="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode"></spline-viewer>
+        </div>
+    </section>
+</body>
+</html>
