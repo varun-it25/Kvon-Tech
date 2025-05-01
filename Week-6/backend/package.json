@@ -1,0 +1,19 @@
+{
+  "name": "task-manager-backend",
+  "version": "1.0.0",
+  "description": "This is ther backend of task manager app.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Varun Kangotra",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.0"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>JQuery Basics</title>
+</head>
+<body>
+    <div>
+        <div id="heading"></div>
+        <div id="text"></div>
+    </div>    
+
+    <script type="text/javascript">
+        $(document).ready(() => {
+            const heading = `<h1>Heading</h1>`
+            const text = `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, sequi adipisci eligendi veniam sed mollitia, repellat dicta consequuntur amet a nisi dolor quibusdam autem?</p>`
+            $("#heading").html(heading)
+            $("#text").html(text)
+        })
+    </script>
+</body>
+</html>
